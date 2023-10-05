@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homepage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E2E2"
+    android:orientation="vertical"
+    tools:context=".Tab1"
+    tools:ignore="Orientation">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_page1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:text="Deliver:"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:drawableStart="@drawable/icon_location"
+            android:drawableEnd="@drawable/arrow_last"
+            android:textColor="@color/black"
+            android:paddingStart="3dp"
+            android:paddingEnd="1dp"
+            android:text=" N03-T7 Ngoại Giao Đoàn, Xuân Tảo, Bắc Từ Liêm, Hà Nội"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+<!--        <androidx.appcompat.widget.SearchView-->
+<!--            android:id="@+id/searchview"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:background="@drawable/custom_search_food"-->
+<!--            android:drawablePadding="3dp"-->
+<!--            app:queryHint="Search here"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:paddingLeft="5dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/category_homepage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:background="@color/Green"
+            app:layout_constraintBottom_toTopOf="@+id/order_viewpagerCate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/black"
+            tools:ignore="NotSibling">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <vn.edu.usth.testview.widget.CustomViewPager
+            android:id="@+id/order_viewpagerCate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_below="@+id/category_homepage1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_homepage1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</RelativeLayout>
